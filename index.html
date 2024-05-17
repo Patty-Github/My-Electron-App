@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <link rel="stylesheet" href="./styles.css">
+        <title>My-Electron-App (Patty Github)</title>
+    </head>
+    <body>
+        <div class="tabsContainer">
+            <button class="tab active"><p>Home</p></button>
+            <button class="tab"><p>Audio Recorder</p></button>
+            <button class="tab"><p>Notes App</p></button>
+        </div>
+        <div class="window" id="homePage">
+            <h1 class="title">My-Electron-App</h1>
+            <p id="info">Info here</p>
+
+            <button id="newWindowBtn">Create New Window</button>
+            <button id="test">Test</button>
+        </div>
+
+        <div class="window">
+            <h1 class="title">Audio Recorder</h1>
+        </div>
+
+        <div class="window">
+            <h1 class="title">Notes App</h1>
+        </div>
+    </body>
+    <script src="./renderer.js"></script>
+
+    <!--
+        onload, have last clicked tab selected. if first load, have home selected.
+    -->
+</html>
